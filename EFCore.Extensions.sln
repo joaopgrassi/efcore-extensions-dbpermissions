@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Extensions.DbPermissions", "src\EFCore.Extensions.DbPermissions\EFCore.Extensions.DbPermissions.csproj", "{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9877E4EE-BF0A-4690-A81A-517320C2B5B3}
+	EndGlobalSection
+EndGlobal
