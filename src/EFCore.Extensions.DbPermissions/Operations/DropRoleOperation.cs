@@ -17,7 +17,7 @@ namespace EFCore.Extensions.DbPermissions.Operations
             MigrationsSqlGeneratorDependencies Dependencies)
         {
             var sqlHelper = Dependencies.SqlGenerationHelper;
-            var stringMapping = Dependencies.TypeMapper.FindMapping(typeof(string));
+            var stringMapping = Dependencies.TypeMappingSource.FindMapping(typeof(string));
 
             builder
                 .Append("DROP ROLE ")

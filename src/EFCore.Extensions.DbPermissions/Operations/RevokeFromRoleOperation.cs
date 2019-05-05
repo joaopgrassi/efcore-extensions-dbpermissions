@@ -24,11 +24,11 @@ namespace EFCore.Extensions.DbPermissions.Operations
                 return;
 
             var sqlHelper = Dependencies.SqlGenerationHelper;
-            var stringMapping = Dependencies.TypeMapper.FindMapping(typeof(string));
+            var stringMapping = Dependencies.TypeMappingSource.FindMapping(typeof(string));
 
             builder
                 .Append("REVOKE ")
-                .Append(sqlHelper.DelimitIdentifier(Permission.GetSqlCommandByPermission()))
+                .Append(Permission.GetSqlCommandByPermission())
                 .Append($" ON {sqlHelper.DelimitIdentifier(Table)}")
                 .Append($" FROM {sqlHelper.DelimitIdentifier(Role)}")
                 .AppendLine(sqlHelper.StatementTerminator)
