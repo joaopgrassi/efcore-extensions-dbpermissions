@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCore.Extensions.DbPermissions
 {
-    public static class DatabaseRoleMigrationBuilderExtensions
+    public static class DbPermissionMigrationBuilderExtensions
     {
         public static MigrationBuilder CreateRole(
             this MigrationBuilder migrationBuilder,
