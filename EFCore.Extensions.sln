@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Extensions.DbPermissions", "src\EFCore.Extensions.DbPermissions\EFCore.Extensions.DbPermissions.csproj", "{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.Extensions.DbPermissions.SqlServer", "src\EFCore.Extensions.DbPermissions.SqlServer\EFCore.Extensions.DbPermissions.SqlServer.csproj", "{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.Extensions.DbPermissions.Core", "src\EFCore.Extensions.DbPermissions.Core\EFCore.Extensions.DbPermissions.Core.csproj", "{1BED4035-B940-4B55-894D-B4569863D8CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBADE3AB-2DF1-4BC4-A897-99988905C5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BED4035-B940-4B55-894D-B4569863D8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BED4035-B940-4B55-894D-B4569863D8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BED4035-B940-4B55-894D-B4569863D8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BED4035-B940-4B55-894D-B4569863D8CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
