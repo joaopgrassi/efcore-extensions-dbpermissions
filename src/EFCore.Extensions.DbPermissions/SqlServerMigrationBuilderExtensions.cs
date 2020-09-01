@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCore.Extensions.DbPermissions.SqlServer
 {
-    public static class DbPermissionMigrationBuilderExtensions
+    public static class SqlServerMigrationBuilderExtensions
     {
         public static MigrationBuilder CreateRole(
             this MigrationBuilder migrationBuilder,
