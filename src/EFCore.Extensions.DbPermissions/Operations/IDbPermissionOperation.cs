@@ -2,7 +2,10 @@
 
 namespace EFCore.Extensions.DbPermissions.Operations
 {
-    public interface IDbPermissionMigrationCommand
+    /// <summary>
+    /// A base interface for all db permission migration operations
+    /// </summary>
+    public interface IDbPermissionOperation
     {
         void BuildMigrationCommand(
             MigrationCommandListBuilder builder,

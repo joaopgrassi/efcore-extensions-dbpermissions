@@ -3,8 +3,14 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace EFCore.Extensions.DbPermissions.Operations
 {
-    public class DropRoleOperation : MigrationOperation, IDbPermissionMigrationCommand
+    /// <summary>
+    /// A <see cref="MigrationOperation" /> dropping a role
+    /// </summary>
+    public class DropRoleOperation : MigrationOperation, IDbPermissionOperation
     {
+        /// <summary>
+        /// The role to drop
+        /// </summary>
         public string Role { get; }
 
         public DropRoleOperation(string role)

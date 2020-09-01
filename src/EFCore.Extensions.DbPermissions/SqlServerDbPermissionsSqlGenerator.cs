@@ -19,7 +19,7 @@ namespace EFCore.Extensions.DbPermissions
             IModel model,
             MigrationCommandListBuilder builder)
         {
-            if (operation is IDbPermissionMigrationCommand dbPermissionMigration)
+            if (operation is IDbPermissionOperation dbPermissionMigration)
             {
                 dbPermissionMigration.BuildMigrationCommand(builder, Dependencies);
             }

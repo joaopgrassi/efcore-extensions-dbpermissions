@@ -3,10 +3,24 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace EFCore.Extensions.DbPermissions.Operations
 {
-    public class GrantToRoleOperation : MigrationOperation, IDbPermissionMigrationCommand
+    /// <summary>
+    /// A <see cref="MigrationOperation" /> for granting permissions to a role
+    /// </summary>
+    public class GrantToRoleOperation : MigrationOperation, IDbPermissionOperation
     {
+        /// <summary>
+        /// The table name
+        /// </summary>
         public string Table { get; }
+
+        /// <summary>
+        /// The role name
+        /// </summary>
         public string Role { get; }
+
+        /// <summary>
+        /// The permissions to grant to the role
+        /// </summary>
         public DbPermissions Permission { get; }
 
         public GrantToRoleOperation(string table, string role, DbPermissions permission)
@@ -24,7 +38,8 @@ namespace EFCore.Extensions.DbPermissions.Operations
                 return;
 
             var sqlHelper = Dependencies.SqlGenerationHelper;
-            var stringMapping = Dependencies.TypeMappingSource.FindMapping(typeof(string));
+
+            // TODO: Add schema to table if it's passed
 
             builder
                 .Append("GRANT ")

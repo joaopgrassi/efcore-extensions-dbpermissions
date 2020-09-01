@@ -3,10 +3,24 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace EFCore.Extensions.DbPermissions.Operations
 {
-    public class RevokeFromRoleOperation : MigrationOperation, IDbPermissionMigrationCommand
+    /// <summary>
+    /// A <see cref="MigrationOperation" /> for revoking permissions from a role
+    /// </summary>
+    public class RevokeFromRoleOperation : MigrationOperation, IDbPermissionOperation
     {
+        /// <summary>
+        /// The table name
+        /// </summary>
         public string Table { get; }
+
+        /// <summary>
+        /// The role name
+        /// </summary>
         public string Role { get; }
+
+        /// <summary>
+        /// The permissions to grant to the role
+        /// </summary>
         public DbPermissions Permission { get; }
 
         public RevokeFromRoleOperation(string table, string role, DbPermissions permission)

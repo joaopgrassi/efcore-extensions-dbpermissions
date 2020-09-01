@@ -3,8 +3,14 @@ using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace EFCore.Extensions.DbPermissions.Operations
 {
-    public class CreateRoleOperation : MigrationOperation, IDbPermissionMigrationCommand
+    /// <summary>
+    /// A <see cref="MigrationOperation" /> for creating a new role
+    /// </summary>
+    public class CreateRoleOperation : MigrationOperation, IDbPermissionOperation
     {
+        /// <summary>
+        /// The role name
+        /// </summary>
         public string Role { get; }
 
         public CreateRoleOperation(string role)
@@ -17,7 +23,6 @@ namespace EFCore.Extensions.DbPermissions.Operations
             MigrationsSqlGeneratorDependencies Dependencies)
         {
             var sqlHelper = Dependencies.SqlGenerationHelper;
-            var stringMapping = Dependencies.TypeMappingSource.FindMapping(typeof(string));
 
             builder
                 .Append("CREATE ROLE ")
