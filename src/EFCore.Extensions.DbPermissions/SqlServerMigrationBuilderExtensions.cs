@@ -1,7 +1,8 @@
-﻿using EFCore.Extensions.DbPermissions.Operations;
+﻿using EFCore.Extensions.DbPermissions.Core;
+using EFCore.Extensions.DbPermissions.SqlServer.Operations;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EFCore.Extensions.DbPermissions
+namespace EFCore.Extensions.DbPermissions.SqlServer
 {
     public static class DbPermissionMigrationBuilderExtensions
     {
@@ -29,7 +30,7 @@ namespace EFCore.Extensions.DbPermissions
             this MigrationBuilder migrationBuilder,
             string table,
             string role,
-            DbPermissions permission)
+            DbPermissionsEnum permission)
         {
             migrationBuilder.Operations.Add(
                 new GrantToRoleOperation(table, role, permission));
@@ -41,7 +42,7 @@ namespace EFCore.Extensions.DbPermissions
             this MigrationBuilder migrationBuilder,
             string table,
             string role,
-            DbPermissions permission)
+            DbPermissionsEnum permission)
         {
             migrationBuilder.Operations.Add(
                 new RevokeFromRoleOperation(table, role, permission));

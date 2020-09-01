@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace EFCore.Extensions.DbPermissions
+namespace EFCore.Extensions.DbPermissions.Core
 {
     [Flags]
-    public enum DbPermissions
+    public enum DbPermissionsEnum
     {
         None = 0,
         Select = 1,

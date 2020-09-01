@@ -1,9 +1,9 @@
-﻿using EFCore.Extensions.DbPermissions.Operations;
+﻿using EFCore.Extensions.DbPermissions.Core;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
-namespace EFCore.Extensions.DbPermissions
+namespace EFCore.Extensions.DbPermissions.SqlServer
 {
     public class SqlServerDbPermissionsSqlGenerator : SqlServerMigrationsSqlGenerator
     {

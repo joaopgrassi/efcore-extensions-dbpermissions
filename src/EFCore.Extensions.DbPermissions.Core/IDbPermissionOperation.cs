@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EFCore.Extensions.DbPermissions.Operations
+namespace EFCore.Extensions.DbPermissions.Core
 {
     /// <summary>
     /// A base interface for all db permission migration operations
